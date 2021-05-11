@@ -1,4 +1,6 @@
 let arr = [1, 2, 3, 4, 5];
+let obj = {}; // grem ham el obyekti hamar lcni key u value, array index-@ key-n, arjeq@ value-n
+//ete default-@ object-a, et depqum petqa elementi index-@ key value-n value lcnelov gna
 
 // function myReduce(array, actionFn) {
 //   let res;
@@ -7,7 +9,14 @@ let arr = [1, 2, 3, 4, 5];
 //   });
 // }
 
-function myReduce(array, acc, item, index, def) {
+function myReduce(array, acc, item, index, def = {}) {
+  if (def instanceof Object) {
+    let res = {};
+    array.forEach((element, index) => {
+      res[index] = element;
+    });
+    return res;
+  }
   if (def) {
     acc = def;
   } else {
@@ -21,3 +30,4 @@ function myReduce(array, acc, item, index, def) {
 }
 
 console.log(myReduce(arr));
+// console.log(1 instanceof Object);
