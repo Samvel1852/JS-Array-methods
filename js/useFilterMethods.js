@@ -13,3 +13,24 @@ function keepNumbersOnly(array) {
 
 console.log(keepNumbersOnly(arr));
 // console.log(!isNaN(parseInt(true)));
+
+// Write a function which remove users with language equals to 'ru'.
+
+const users = [
+  {
+    username: "Yuri Gagarin",
+    lang: "ru",
+  },
+  {
+    username: "Nil Armstrong",
+    lang: "ENG",
+  },
+];
+
+function filterUsers(arr) {
+  let tempArr = arr;
+  tempArr = tempArr.filter((item) => item.lang !== "ru");
+  return tempArr;
+}
+
+console.log(filterUsers(users)); // [{ username: "Nil Armstrong, lang: "ENG" }]
