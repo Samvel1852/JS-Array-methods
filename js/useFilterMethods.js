@@ -34,3 +34,32 @@ function filterUsers(arr) {
 }
 
 console.log(filterUsers(users)); // [{ username: "Nil Armstrong, lang: "ENG" }]
+
+// Write a function which filters object by field.
+
+const users1 = [
+  {
+    username: "Yuri Gagarin",
+    lang: "ru",
+    isAstronaut: true,
+  },
+  {
+    username: "Nil Armstrong",
+    lang: "ENG",
+    isAstronaut: true,
+  },
+  {
+    username: "Elon Musk",
+    isAstronaut: false,
+  },
+];
+
+function filterByField(arr) {
+  let tempArr = arr;
+  tempArr = tempArr.filter((item) => item.isAstronaut);
+  return tempArr;
+}
+
+console.log(filterByField(users1, "isAstronaut")); // [{ username: "Yuri Gagarin",
+// lang: "ru", isAstronaut: true, }, { username: "Nil Armstrong, lang: "ENG"
+// }]
