@@ -30,3 +30,14 @@ function getUsernameLengths(arr) {
 }
 
 console.log(getUsernameLengths(users)); // [12, 13])
+
+// Write a function which parses string integers. If it's not possible to
+// parse, then add null
+
+function parseInteger(arr) {
+  let tempArr = arr;
+  tempArr = tempArr.map((item) => (parseInt(item) ? parseInt(item) : null));
+  return tempArr;
+}
+
+console.log(parseInteger(["1", "px", "2323"])); // [1, null, 2323];)
