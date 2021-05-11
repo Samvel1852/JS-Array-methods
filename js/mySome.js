@@ -1,6 +1,6 @@
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-function myEvery(array, checkFn) {
+function mySome(array, checkFn) {
   let resArr = [];
   let trueCount = 0;
   array.forEach((element) => {
@@ -21,4 +21,4 @@ function checkFn(item) {
   return false;
 }
 
-console.log(myEvery(arr, checkFn));
+console.log(mySome(arr, checkFn));
