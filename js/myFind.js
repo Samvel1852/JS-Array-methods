@@ -8,7 +8,7 @@ let arrOfObjs = [
   { name: "Samvel", age: 26 },
 ];
 
-function myFindIndex(array, age) {
+function myFind(array, age) {
   for (let i = 0; i < array.length; i += 1) {
     let element = array[i];
     if (element.age === age) {
@@ -18,4 +18,4 @@ function myFindIndex(array, age) {
   return -1;
 }
 
-console.log(myFindIndex(arrOfObjs, 20));
+console.log(myFind(arrOfObjs, 20));
