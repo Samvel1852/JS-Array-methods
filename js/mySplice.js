@@ -16,4 +16,4 @@ function mySplice(array, start, count, ...items) {
   return tempArr;
 }
 
-console.log(mySplice(arr, 2, 3, 20, 30, 40));
+console.log(mySplice(arr, 2, 3, 20, 30));
