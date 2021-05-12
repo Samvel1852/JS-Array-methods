@@ -10,7 +10,7 @@ let obj = {}; // grem ham el obyekti hamar lcni key u value, array index-@ key-n
 // }
 
 function myReduce(array, acc, item, index, def = {}) {
-  if (def instanceof Object) {
+  if (def instanceof Object && !Array.isArray(def)) {
     let res = {};
     array.forEach((element, index) => {
       res[index] = element;
